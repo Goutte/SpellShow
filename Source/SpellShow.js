@@ -27,25 +27,26 @@ SpellShow = new Class({
   Implements: [Options, Chain, Events],
 
   options: {
-    noSetup: false
-
-    // onReady: Function.from
-    // onStart: Function.from
-    // onComplete: Function.from
+    noSetup: false,
+    onReady: Function.from,
+    onStart: Function.from,
+    onComplete: Function.from
   },
 
   initialize: function (containerId, options) {
     this.container = document.id (containerId);
+    this.setOptions(options);
     this.ssm = new SmoothSequentialMorph ({
       opacity: [0,1]
     }, {
+      onComplete: this.options.onComplete,
       parentElementId: containerId,
       noSetup: true,
       concurrentialMorphs: 3,
       morphDuration: 150,
       initialCss: {opacity: 0}
     });
-    this.setOptions(options);
+
 
     if (!this.options.noSetup) this.setup();
   },
