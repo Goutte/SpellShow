@@ -39,7 +39,8 @@ SpellShow = new Class({
     this.ssm = new SmoothSequentialMorph ({
       opacity: [0,1]
     }, {
-      onComplete: this.options.onComplete,
+//      onComplete: this.options.onComplete,
+      onComplete: function(){alert('?')},
       parentElementId: containerId,
       noSetup: true,
       concurrentialMorphs: 3,
