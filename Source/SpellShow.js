@@ -27,10 +27,10 @@ SpellShow = new Class({
   Implements: [Options, Chain, Events],
 
   options: {
-    noSetup: false,
     onReady: Function.from,
     onStart: Function.from,
-    onComplete: Function.from
+    onComplete: function(){},
+    noSetup: false
   },
 
   initialize: function (containerId, options) {
@@ -39,6 +39,7 @@ SpellShow = new Class({
     this.setOptions(options);
     console.log (this.options);
     console.log (this.options.onComplete);
+    console.log (this);
 
     this.ssm = new SmoothSequentialMorph ({
       opacity: [0,1]
