@@ -7,7 +7,7 @@ authors:
   - Antoine Goutenoir <antoine@goutenoir.com>
 
 demo:
-  - 
+  - http://jsfiddle.net/goutte/KJZAg/
 
 licence:
   - lulz
