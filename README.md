@@ -1,6 +1,8 @@
 SpellShow
 =========
 
+![Logo](http://github.com/Goutte/SpellShow/raw/master/Docs/spellShow.png)
+
 Makes text appear to screen character by character with opacity.
 Needs Mootools. (tested up to 1.4)
 
