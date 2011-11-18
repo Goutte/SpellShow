@@ -35,7 +35,11 @@ SpellShow = new Class({
 
   initialize: function (containerId, options) {
     this.container = document.id (containerId);
+    console.log (options);
     this.setOptions(options);
+    console.log (this.options);
+    console.log (this.options.onComplete);
+
     this.ssm = new SmoothSequentialMorph ({
       opacity: [0,1]
     }, {
@@ -128,6 +132,7 @@ Element.implement({
       var defaultOptions = {
         // shenanigans !
       };
+      console.log (Object.merge(defaultOptions, options));
       this.typewriter = new SpellShow (this, Object.merge(defaultOptions, options));
     } else {
       this.typewriter.setOptions(options);
