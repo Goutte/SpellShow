@@ -1,8 +1,9 @@
-name: Typewriter
+name: SpellShow
 author: LaGoutte
 category: Effects
 tags:
   - text
+  - typewriter
   - effect
 current: 1.0
 #demo: http://jsfiddle.net/goutte/K6R8k/

@@ -18,7 +18,8 @@ requires:
   - Events
 
 provides:
-  - SmoothSequentialMorph
+  - SpellShow
+  - Element.spellShow
 ...
 */
 SpellShow = new Class({
