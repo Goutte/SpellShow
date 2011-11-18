@@ -1,9 +1,7 @@
 /*
 ---
 
-description: Manages a smoothly sequential morphing of passed elements
-             and of children elements of passed parent element.
-             The smoothness spans to options.concurrentialMorphs elements.
+description: Manages a smoothly sequential morphing of passed elements and of children elements of passed parent element. The smoothness spans to options.concurrentialMorphs elements.
 
 authors:
   - Antoine Goutenoir <antoine@goutenoir.com>
@@ -17,7 +15,7 @@ requires:
   - Events
 
 provides:
- - SmoothSequentialMorph
+  - SmoothSequentialMorph
 
 ...
 */
