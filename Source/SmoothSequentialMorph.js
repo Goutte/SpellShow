@@ -1,5 +1,6 @@
 /*
 ---
+
 description: Manages a smoothly sequential morphing of passed elements
              and of children elements of passed parent element.
              The smoothness spans to options.concurrentialMorphs elements.
@@ -15,10 +16,12 @@ requires:
   - Chain
   - Events
 
-provides: SmoothSequentialMorph
+provides:
+ - SmoothSequentialMorph
 
 ...
 */
+
 SmoothSequentialMorph = new Class({
 
   Implements: [Options, Chain, Events],
