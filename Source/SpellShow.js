@@ -13,9 +13,7 @@ licence:
   - lulz
 
 requires:
-  - Options
-  - Chain
-  - Events
+  - SmoothSequentialMorph
 
 provides:
   - SpellShow
