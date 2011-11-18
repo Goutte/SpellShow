@@ -1,7 +1,7 @@
 /*
 ---
-description: Types text like a typewriter, with the ability to "type" multiple letters at the same time, to smoothen
-             the apparition.
+
+description: Types text like a typewriter, with the ability to "type" multiple letters at the same time, to smoothen the apparition.
 
 authors:
   - Antoine Goutenoir <antoine@goutenoir.com>
@@ -18,8 +18,10 @@ requires:
 provides:
   - SpellShow
   - Element.spellShow
+
 ...
 */
+
 SpellShow = new Class({
 
   Implements: [Options, Chain, Events],
