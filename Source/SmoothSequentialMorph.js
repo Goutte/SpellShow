@@ -15,8 +15,7 @@ requires:
   - Chain
   - Events
 
-provides:
-  - SmoothSequentialMorph
+provides: SmoothSequentialMorph
 
 ...
 */
