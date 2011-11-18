@@ -29,7 +29,7 @@ SpellShow = new Class({
   options: {
     onReady: Function.from,
     onStart: Function.from,
-    onComplete: function(){},
+    onComplete: Function.from,
     noSetup: false
   },
 
@@ -45,7 +45,7 @@ SpellShow = new Class({
       opacity: [0,1]
     }, {
 //      onComplete: this.options.onComplete,
-      onComplete: function(){alert('?')},
+      onComplete: function(){this.fireEvent('complete')}.bind(this),
       parentElementId: containerId,
       noSetup: true,
       concurrentialMorphs: 3,
