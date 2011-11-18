@@ -8,7 +8,7 @@ authors:
   - Antoine Goutenoir <antoine@goutenoir.com>
 
 licence:
-  - lulz
+  - libre
 
 requires:
   - Options
@@ -17,6 +17,7 @@ requires:
 
 provides:
   - SmoothSequentialMorph
+
 ...
 */
 SmoothSequentialMorph = new Class({
