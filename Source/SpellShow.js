@@ -30,22 +30,25 @@ SpellShow = new Class({
     onReady: Function.from,
     onStart: Function.from,
     onComplete: Function.from,
-    noSetup: false
+    noSetup: false,
+    smoothSequentialMorphProperties: {
+      opacity: [0,1]
+    },
+    smoothSequentialMorphOptions: {
+      concurrentialMorphs: 3,
+      morphDuration: 150,
+      initialCss: {opacity: 0}
+    }
   },
 
   initialize: function (containerId, options) {
     this.container = document.id (containerId);
     this.setOptions(options);
-    this.ssm = new SmoothSequentialMorph ({
-      opacity: [0,1]
-    }, {
+    this.ssm = new SmoothSequentialMorph (this.options.smoothSequentialMorphProperties, Object.merge({
       onComplete: function(){this.fireEvent('complete')}.bind(this),
       parentElementId: containerId,
-      noSetup: true,
-      concurrentialMorphs: 3,
-      morphDuration: 150,
-      initialCss: {opacity: 0}
-    });
+      noSetup: true
+    },this.options.smoothSequentialMorphOptions));
 
 
     if (!this.options.noSetup) this.setup();
