@@ -45,7 +45,10 @@ SpellShow = new Class({
     this.container = document.id (containerId);
     this.setOptions(options);
     this.ssm = new SmoothSequentialMorph (this.options.smoothSequentialMorphProperties, Object.merge({
-      onComplete: function(){this.fireEvent('complete')}.bind(this),
+      onComplete: function(){
+        this.fireEvent('complete');
+        this.callChain();
+      }.bind(this),
       parentElementId: containerId,
       noSetup: true
     },this.options.smoothSequentialMorphOptions));
