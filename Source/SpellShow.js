@@ -129,18 +129,13 @@ SpellShow = new Class({
 Element.implement({
 
   spellShow: function (options) {
-    if (!this.typewriter) {
-      var defaultOptions = {
-        // shenanigans !
-      };
-      this.typewriter = new SpellShow (this, Object.merge(defaultOptions, options));
-    } else {
-      this.typewriter.setOptions(options);
-    }
+    if (this._spellShow) this._spellShow = null;
 
-    this.typewriter.setup().start();
+    this._spellShow = new SpellShow (this, options);
 
-    return this.typewriter;
+    this._spellShow.setup().start();
+
+    return this._spellShow;
   }
 
 });
